@@ -1,0 +1,10 @@
+---
+- name: installing services
+  hosts: all
+  become: true
+
+  tasks:
+  - name: delete apache service
+    dnf:
+      name: httpd
+      state: absent
